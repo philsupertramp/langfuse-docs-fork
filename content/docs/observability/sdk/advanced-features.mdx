@@ -439,7 +439,7 @@ For all integrations in multi-project setups, you must specify the `public_key` 
 
 **Observe Decorator:**
 
-Pass `langfuse_public_key` as a keyword argument to the *top-most* observed function (not the decorator). From Python SDK >= 3.2.2, nested decorated functions will automatically pick up the public key from the execution context they are currently into. Also, calls to `get_client` will be also aware of the current `langfuse_public_key` in the decorated function execution context, so passing the `langfuse_public_key` here again is not necessary.
+Pass `langfuse_public_key` as a keyword argument to the *top-most* observed function (not the decorator). From Python SDK >= 3.2.2, nested decorated functions will automatically pick up the public key from the execution context they are currently in. Calls to `get_client` will also be aware of the current `langfuse_public_key` in the decorated function execution context, so passing the `langfuse_public_key` here again is not necessary.
 
 ```python
 from langfuse import observe
